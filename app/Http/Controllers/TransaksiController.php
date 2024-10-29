@@ -2,63 +2,57 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Transaksi;
 use Illuminate\Http\Request;
 
 class TransaksiController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $transaksi = Transaksi::all();
+        return view('transaksi.index', compact('transaksi'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('transaksi.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'tanggal_transaksi' => 'required|date',
+            'total_pembelian'   => 'required|numeric',
+            'metode_pembayaran'  => 'required|string|max:100',
+        ]);
+
+        Transaksi::create($request->all());
+        return redirect()->route('transaksi.index')->with('success', 'Transaksi berhasil ditambahkan.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function edit($id)
     {
-        //
+        $transaksi = Transaksi::findOrFail($id);
+        return view('transaksi.edit', compact('transaksi'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'tanggal_transaksi' => 'required|date',
+            'total_pembelian'   => 'required|numeric',
+            'metode_pembayaran'  => 'required|string|max:100',
+        ]);
+
+        $transaksi = Transaksi::findOrFail($id);
+        $transaksi->update($request->all());
+        return redirect()->route('transaksi.index')->with('success', 'Transaksi berhasil diperbarui.');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        $transaksi = Transaksi::findOrFail($id);
+        $transaksi->delete();
+        return redirect()->route('transaksi.index')->with('success', 'Transaksi berhasil dihapus.');
     }
 }

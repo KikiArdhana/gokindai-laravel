@@ -2,63 +2,55 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Member;
 use Illuminate\Http\Request;
 
 class MemberController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $member = Member::all();
+        return view('member.index', compact('member'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('member.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama_pelanggan' => 'required|string|max:255',
+            'no_telepon'     => 'required|string|max:15',
+        ]);
+
+        Member::create($request->all());
+        return redirect()->route('member.index')->with('success', 'Member berhasil ditambahkan.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function edit($id)
     {
-        //
+        $member = Member::findOrFail($id);
+        return view('member.edit', compact('member'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nama_pelanggan' => 'required|string|max:255',
+            'no_telepon'     => 'required|string|max:15',
+        ]);
+
+        $member = Member::findOrFail($id);
+        $member->update($request->all());
+        return redirect()->route('member.index')->with('success', 'Member berhasil diperbarui.');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        $member = Member::findOrFail($id);
+        $member->delete();
+        return redirect()->route('member.index')->with('success', 'Member berhasil dihapus.');
     }
 }

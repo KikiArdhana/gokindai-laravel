@@ -2,63 +2,59 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Diskon;
 use Illuminate\Http\Request;
 
 class DiskonController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $diskon = Diskon::all();
+        return view('diskon.index', compact('diskon'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('diskon.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama_diskon' => 'required|string|max:255',
+            'persentase'   => 'required|numeric',
+            'tanggal_mulai'=> 'required|date',
+            'tanggal_berakhir'=> 'required|date',
+        ]);
+
+        Diskon::create($request->all());
+        return redirect()->route('diskon.index')->with('success', 'Diskon berhasil ditambahkan.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function edit($id)
     {
-        //
+        $diskon = Diskon::findOrFail($id);
+        return view('diskon.edit', compact('diskon'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nama_diskon' => 'required|string|max:255',
+            'persentase'   => 'required|numeric',
+            'tanggal_mulai'=> 'required|date',
+            'tanggal_berakhir'=> 'required|date',
+        ]);
+
+        $diskon = Diskon::findOrFail($id);
+        $diskon->update($request->all());
+        return redirect()->route('diskon.index')->with('success', 'Diskon berhasil diperbarui.');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        $diskon = Diskon::findOrFail($id);
+        $diskon->delete();
+        return redirect()->route('diskon.index')->with('success', 'Diskon berhasil dihapus.');
     }
 }

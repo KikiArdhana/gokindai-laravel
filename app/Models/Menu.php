@@ -9,7 +9,13 @@ class Menu extends Model
 {
     use HasFactory;
 
-    protected $table = 'menu'; // Nama tabel
-    protected $primaryKey = 'id'; // Primary key
-    protected $fillable = ['nama_item', 'harga', 'kategori']; // Kolom yang bisa diisi
+    protected $table = 'menu'; // Nama tabel di database
+    protected $primaryKey = 'id_item'; // Menetapkan primary key
+
+
+    protected $fillable = [
+        'nama_item',
+        'harga',
+        'kategori',
+    ];
 }
