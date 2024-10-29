@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container mx-auto p-4">
+        <h1> Ini pegawai</h1>
         <h1 class="text-2xl font-bold mb-6">Daftar Pegawai</h1>
         <a href="{{ route('pegawai.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded">Tambah Pegawai</a>
         <table class="min-w-full bg-white border border-gray-200 mt-4">
