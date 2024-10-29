@@ -2,63 +2,57 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Level;
 use Illuminate\Http\Request;
 
 class LevelController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $level = Level::all();
+        return view('level.index', compact('level'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('level.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama_level' => 'required|string|max:255',
+            'min_poin'   => 'required|integer',
+            'max_poin'   => 'required|integer',
+        ]);
+
+        Level::create($request->all());
+        return redirect()->route('level.index')->with('success', 'Level berhasil ditambahkan.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function edit($id)
     {
-        //
+        $level = Level::findOrFail($id);
+        return view('level.edit', compact('level'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nama_level' => 'required|string|max:255',
+            'min_poin'   => 'required|integer',
+            'max_poin'   => 'required|integer',
+        ]);
+
+        $level = Level::findOrFail($id);
+        $level->update($request->all());
+        return redirect()->route('level.index')->with('success', 'Level berhasil diperbarui.');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        $level = Level::findOrFail($id);
+        $level->delete();
+        return redirect()->route('level.index')->with('success', 'Level berhasil dihapus.');
     }
 }

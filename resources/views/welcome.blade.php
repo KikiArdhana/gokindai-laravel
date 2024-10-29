@@ -108,7 +108,6 @@ section {
     </div>
 </section>
 
-
 <!-- Reward -->
 <section id="reward" class="flex flex-col justify-center items-center ">
     <div class="mt-10 text-center">

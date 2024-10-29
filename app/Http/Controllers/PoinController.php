@@ -2,63 +2,55 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Poin;
 use Illuminate\Http\Request;
 
 class PoinController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $poin = Poin::all();
+        return view('poin.index', compact('poin'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('poin.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'jumlah_poin'    => 'required|integer',
+            'tanggal_diberikan' => 'required|date',
+        ]);
+
+        Poin::create($request->all());
+        return redirect()->route('poin.index')->with('success', 'Poin berhasil ditambahkan.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function edit($id)
     {
-        //
+        $poin = Poin::findOrFail($id);
+        return view('poin.edit', compact('poin'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'jumlah_poin'    => 'required|integer',
+            'tanggal_diberikan' => 'required|date',
+        ]);
+
+        $poin = Poin::findOrFail($id);
+        $poin->update($request->all());
+        return redirect()->route('poin.index')->with('success', 'Poin berhasil diperbarui.');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        $poin = Poin::findOrFail($id);
+        $poin->delete();
+        return redirect()->route('poin.index')->with('success', 'Poin berhasil dihapus.');
     }
 }
