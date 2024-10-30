@@ -8,25 +8,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-
 <div class="container mt-5">
-    <h1 class="mb-4">Tambah Poin</h1>
+    <h1 class="text-2xl font-bold mb-4">Tambah Poin</h1>
+    
     <form action="{{ route('poin.store') }}" method="POST">
         @csrf
         <div class="form-group">
-            <label for="nama_poin">Nama Poin</label>
-            <input type="text" class="form-control" id="nama_poin" name="nama_poin" required>
+            <label for="jumlah_poin">Jumlah Poin</label>
+            <input type="number" class="form-control" id="jumlah_poin" name="jumlah_poin" required>
         </div>
+        
         <div class="form-group">
-            <label for="poin_diperoleh">Poin Diperoleh</label>
-            <input type="number" class="form-control" id="poin_diperoleh" name="poin_diperoleh" required>
+            <label for="tanggal_diberikan">Tanggal Diberikan</label>
+            <input type="date" class="form-control" id="tanggal_diberikan" name="tanggal_diberikan" required>
         </div>
-        <div class="form-group">
-            <label for="poin_dapat_digunakan">Poin Dapat Digunakan</label>
-            <input type="number" class="form-control" id="poin_dapat_digunakan" name="poin_dapat_digunakan" required>
-        </div>
+        
         <button type="submit" class="btn btn-primary">Simpan</button>
-        <a href="{{ route('poin.index') }}" class="btn btn-secondary">Kembali</a>
+        <a href="{{ route('poin.index') }}" class="btn btn-secondary">Batal</a>
     </form>
 </div>
 
