@@ -25,24 +25,26 @@
         <thead class="thead-light text-center">
             <tr>
                 <th>ID Poin</th>
-                <th>Nama Poin</th>
-                <th>Poin Diperoleh</th>
-                <th>Poin Dapat Digunakan</th>
+                <th>Jumlah Poin</th>
+                <th>Tanggal Diberikan</th>
+                <th>Created At</th>
+                <th>Updated At</th>
                 <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($poin as $poin)
+            @foreach ($poin as $p)
                 <tr class="text-center">
-                    <td>{{ $poin->id_poin }}</td>
-                    <td>{{ $poin->nama_poin }}</td>
-                    <td>{{ $poin->poin_diperoleh }}</td>
-                    <td>{{ $poin->poin_dapat_digunakan }}</td>
+                    <td>{{ $p->id_poin }}</td>
+                    <td>{{ $p->jumlah_poin }}</td>
+                    <td>{{ $p->tanggal_diberikan }}</td>
+                    <td>{{ $p->created_at }}</td>
+                    <td>{{ $p->updated_at }}</td>
                     <td>
-                        <a href="{{ route('poin.edit', $poin->id_poin) }}" class="btn btn-warning btn-sm">
+                        <a href="{{ route('poin.edit', $p->id_poin) }}" class="btn btn-warning btn-sm">
                             <i class="fas fa-edit"></i>
                         </a>
-                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#confirmDeleteModal" onclick="setDeleteForm('{{ route('poin.destroy', $poin->id_poin) }}')">
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#confirmDeleteModal" onclick="setDeleteForm('{{ route('poin.destroy', $p->id_poin) }}')">
                             <i class="fas fa-trash"></i>
                         </button>
                     </td>
