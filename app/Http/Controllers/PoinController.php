@@ -10,12 +10,12 @@ class PoinController extends Controller
     public function index()
     {
         $poin = Poin::all();
-        return view('poin.index', compact('poin'));
+        return view('dashboard.poin.index', compact('poin'));
     }
 
     public function create()
     {
-        return view('poin.create');
+        return view('dashboard.poin.create');
     }
 
     public function store(Request $request)
@@ -32,7 +32,7 @@ class PoinController extends Controller
     public function edit($id)
     {
         $poin = Poin::findOrFail($id);
-        return view('poin.edit', compact('poin'));
+        return view('dashboard.poin.edit', compact('poin'));
     }
 
     public function update(Request $request, $id)

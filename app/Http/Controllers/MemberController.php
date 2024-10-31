@@ -10,12 +10,12 @@ class MemberController extends Controller
     public function index()
     {
         $member = Member::all();
-        return view('member.index', compact('member'));
+        return view('dashboard.member.index', compact('member'));
     }
 
     public function create()
     {
-        return view('member.create');
+        return view('dashboard.member.create');
     }
 
     public function store(Request $request)
@@ -32,7 +32,7 @@ class MemberController extends Controller
     public function edit($id)
     {
         $member = Member::findOrFail($id);
-        return view('member.edit', compact('member'));
+        return view('dashboard.member.edit', compact('member'));
     }
 
     public function update(Request $request, $id)

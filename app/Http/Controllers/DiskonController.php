@@ -10,12 +10,12 @@ class DiskonController extends Controller
     public function index()
     {
         $diskon = Diskon::all();
-        return view('diskon.index', compact('diskon'));
+        return view('dashboard.diskon.index', compact('diskon'));
     }
 
     public function create()
     {
-        return view('diskon.create');
+        return view('dashboard.diskon.create');
     }
 
     public function store(Request $request)
@@ -28,13 +28,13 @@ class DiskonController extends Controller
         ]);
 
         Diskon::create($request->all());
-        return redirect()->route('diskon.index')->with('success', 'Diskon berhasil ditambahkan.');
+        return redirect()->route('dashboard.diskon.index')->with('success', 'Diskon berhasil ditambahkan.');
     }
 
     public function edit($id)
     {
         $diskon = Diskon::findOrFail($id);
-        return view('diskon.edit', compact('diskon'));
+        return view('dashboard.diskon.edit', compact('diskon'));
     }
 
     public function update(Request $request, $id)
@@ -48,13 +48,13 @@ class DiskonController extends Controller
 
         $diskon = Diskon::findOrFail($id);
         $diskon->update($request->all());
-        return redirect()->route('diskon.index')->with('success', 'Diskon berhasil diperbarui.');
+        return redirect()->route('dashboard.diskon.index')->with('success', 'Diskon berhasil diperbarui.');
     }
 
     public function destroy($id)
     {
         $diskon = Diskon::findOrFail($id);
         $diskon->delete();
-        return redirect()->route('diskon.index')->with('success', 'Diskon berhasil dihapus.');
+        return redirect()->route('dashboard.diskon.index')->with('success', 'Diskon berhasil dihapus.');
     }
 }

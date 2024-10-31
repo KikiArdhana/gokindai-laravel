@@ -10,12 +10,12 @@ class LevelController extends Controller
     public function index()
     {
         $level = Level::all();
-        return view('level.index', compact('level'));
+        return view('dashboard.level.index', compact('level'));
     }
 
     public function create()
     {
-        return view('level.create');
+        return view('dashboard.level.create');
     }
 
     public function store(Request $request)
@@ -33,7 +33,7 @@ class LevelController extends Controller
     public function edit($id)
     {
         $level = Level::findOrFail($id);
-        return view('level.edit', compact('level'));
+        return view('dashboard.level.edit', compact('level'));
     }
 
     public function update(Request $request, $id)
