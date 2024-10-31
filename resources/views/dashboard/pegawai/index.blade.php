@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Toastr CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    @extends('dashboard.index')
 </head>
+
+@section('content')
 <body>
 
 @if (session('success'))
@@ -92,3 +95,4 @@
     </script>
 </body>
 </html>
+@endsection

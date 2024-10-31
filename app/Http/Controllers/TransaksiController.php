@@ -10,12 +10,12 @@ class TransaksiController extends Controller
     public function index()
     {
         $transaksi = Transaksi::all();
-        return view('transaksi.index', compact('transaksi'));
+        return view('dashboard.transaksi.index', compact('transaksi'));
     }
 
     public function create()
     {
-        return view('transaksi.create');
+        return view('dashboard.transaksi.create');
     }
 
     public function store(Request $request)
@@ -28,12 +28,13 @@ class TransaksiController extends Controller
 
         Transaksi::create($request->all());
         return redirect()->route('transaksi.index')->with('success', 'Transaksi berhasil ditambahkan.');
+
     }
 
     public function edit($id)
     {
         $transaksi = Transaksi::findOrFail($id);
-        return view('transaksi.edit', compact('transaksi'));
+        return view('dashboard.transaksi.edit', compact('transaksi'));
     }
 
     public function update(Request $request, $id)
@@ -47,6 +48,7 @@ class TransaksiController extends Controller
         $transaksi = Transaksi::findOrFail($id);
         $transaksi->update($request->all());
         return redirect()->route('transaksi.index')->with('success', 'Transaksi berhasil diperbarui.');
+
     }
 
     public function destroy($id)

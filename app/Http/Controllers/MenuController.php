@@ -10,12 +10,12 @@ class MenuController extends Controller
     public function index()
     {
         $menu = Menu::all();
-        return view('menu.index', compact('menu'));
+        return view('dashboard.menu.index', compact('menu'));
     }
 
     public function create()
     {
-        return view('menu.create');
+        return view('dashboard.menu.create');
     }
 
     public function store(Request $request)
@@ -33,7 +33,7 @@ class MenuController extends Controller
     public function edit($id)
     {
         $menu = Menu::findOrFail($id);
-        return view('menu.edit', compact('menu'));
+        return view('dashboard.menu.edit', compact('menu'));
     }
 
     public function update(Request $request, $id)
