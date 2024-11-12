@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "876311218b51fa1d4e9866cc5f2941fa",
     "packages": [
         {
@@ -223,6 +224,11 @@
             "time": "2024-10-17T17:38:00+00:00"
         },
         {
+=======
+    "content-hash": "589cc0f65c3aaa7d4e9024d545bc1974",
+    "packages": [
+        {
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             "name": "brick/math",
             "version": "0.12.1",
             "source": {
@@ -352,6 +358,7 @@
             "time": "2024-02-09T16:56:22+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "danharrin/date-format-converter",
             "version": "v0.3.1",
             "source": {
@@ -457,6 +464,8 @@
             "time": "2024-05-06T09:10:03+00:00"
         },
         {
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             "name": "dflydev/dot-access-data",
             "version": "v3.0.3",
             "source": {
@@ -532,6 +541,7 @@
             "time": "2024-07-08T12:26:09+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "doctrine/dbal",
             "version": "4.2.1",
             "source": {
@@ -687,6 +697,8 @@
             "time": "2024-01-30T19:34:25+00:00"
         },
         {
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             "name": "doctrine/inflector",
             "version": "2.0.10",
             "source": {
@@ -987,6 +999,7 @@
             "time": "2023-10-06T06:47:41+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "filament/actions",
             "version": "v3.2.122",
             "source": {
@@ -1419,6 +1432,8 @@
             "time": "2024-10-08T14:24:26+00:00"
         },
         {
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             "name": "fruitcake/php-cors",
             "version": "v1.3.0",
             "source": {
@@ -1963,6 +1978,7 @@
             "time": "2023-12-03T19:50:20+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "kirschbaum-development/eloquent-power-joins",
             "version": "4.0.0",
             "source": {
@@ -2037,6 +2053,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/dff716442d9c229d716be82ccc9a7de52eb97193",
                 "reference": "dff716442d9c229d716be82ccc9a7de52eb97193",
+=======
+            "name": "laravel/framework",
+            "version": "v11.29.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "425054512c362835ba9c0307561973c8eeac7385"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/425054512c362835ba9c0307561973c8eeac7385",
+                "reference": "425054512c362835ba9c0307561973c8eeac7385",
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
                 "shasum": ""
             },
             "require": {
@@ -2232,7 +2261,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
             "time": "2024-10-30T15:00:34+00:00"
+=======
+            "time": "2024-10-22T14:13:31+00:00"
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
         },
         {
             "name": "laravel/prompts",
@@ -2609,6 +2642,7 @@
             "time": "2022-12-11T20:36:23+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "league/csv",
             "version": "9.18.0",
             "source": {
@@ -2696,6 +2730,8 @@
             "time": "2024-10-18T08:14:48+00:00"
         },
         {
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             "name": "league/flysystem",
             "version": "3.29.1",
             "source": {
@@ -2884,6 +2920,7 @@
             "time": "2024-09-21T08:32:55+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "league/uri",
             "version": "7.4.1",
             "source": {
@@ -3201,6 +3238,8 @@
             "time": "2024-03-31T07:05:07+00:00"
         },
         {
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             "name": "monolog/monolog",
             "version": "3.7.0",
             "source": {
@@ -3303,6 +3342,7 @@
         },
         {
             "name": "nesbot/carbon",
+<<<<<<< HEAD
             "version": "3.8.1",
             "source": {
                 "type": "git",
@@ -3317,6 +3357,22 @@
             },
             "require": {
                 "carbonphp/carbon-doctrine-types": "<100.0",
+=======
+            "version": "3.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/briannesbitt/Carbon.git",
+                "reference": "bbd3eef89af8ba66a3aa7952b5439168fbcc529f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bbd3eef89af8ba66a3aa7952b5439168fbcc529f",
+                "reference": "bbd3eef89af8ba66a3aa7952b5439168fbcc529f",
+                "shasum": ""
+            },
+            "require": {
+                "carbonphp/carbon-doctrine-types": "*",
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
                 "ext-json": "*",
                 "php": "^8.1",
                 "psr/clock": "^1.0",
@@ -3405,7 +3461,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-11-03T16:02:24+00:00"
+=======
+            "time": "2024-08-19T06:22:39+00:00"
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
         },
         {
             "name": "nette/schema",
@@ -3701,6 +3761,7 @@
             "time": "2024-10-15T16:15:16+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "openspout/openspout",
             "version": "v4.26.0",
             "source": {
@@ -3794,6 +3855,8 @@
             "time": "2024-09-24T14:04:43+00:00"
         },
         {
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             "name": "phpoption/phpoption",
             "version": "1.9.3",
             "source": {
@@ -3869,6 +3932,7 @@
             "time": "2024-07-20T21:41:07+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "psr/cache",
             "version": "3.0.0",
             "source": {
@@ -3918,6 +3982,8 @@
             "time": "2021-02-03T23:26:27+00:00"
         },
         {
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             "name": "psr/clock",
             "version": "1.0.0",
             "source": {
@@ -4634,6 +4700,7 @@
             "time": "2024-04-27T21:32:50+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "ryangjchandler/blade-capture-directive",
             "version": "v1.0.0",
             "source": {
@@ -4890,6 +4957,8 @@
             "time": "2024-08-27T18:56:10+00:00"
         },
         {
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             "name": "symfony/clock",
             "version": "v7.1.6",
             "source": {
@@ -5484,6 +5553,7 @@
             "time": "2024-10-01T08:31:23+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "symfony/html-sanitizer",
             "version": "v7.1.6",
             "source": {
@@ -5553,6 +5623,8 @@
             "time": "2024-09-25T14:20:29+00:00"
         },
         {
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             "name": "symfony/http-foundation",
             "version": "v7.1.6",
             "source": {
@@ -7456,6 +7528,7 @@
     ],
     "packages-dev": [
         {
+<<<<<<< HEAD
             "name": "barryvdh/laravel-debugbar",
             "version": "v3.14.6",
             "source": {
@@ -7540,6 +7613,8 @@
             "time": "2024-10-18T13:15:12+00:00"
         },
         {
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             "name": "fakerphp/faker",
             "version": "v1.23.1",
             "source": {
@@ -7869,6 +7944,7 @@
         },
         {
             "name": "laravel/sail",
+<<<<<<< HEAD
             "version": "v1.37.1",
             "source": {
                 "type": "git",
@@ -7879,6 +7955,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/sail/zipball/7efa151ea0d16f48233d6a6cd69f81270acc6e93",
                 "reference": "7efa151ea0d16f48233d6a6cd69f81270acc6e93",
+=======
+            "version": "v1.37.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/sail.git",
+                "reference": "5d385f2e698f0f774cdead82aff5d989fb95309b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/5d385f2e698f0f774cdead82aff5d989fb95309b",
+                "reference": "5d385f2e698f0f774cdead82aff5d989fb95309b",
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
                 "shasum": ""
             },
             "require": {
@@ -7928,6 +8016,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
+<<<<<<< HEAD
             "time": "2024-10-29T20:18:14+00:00"
         },
         {
@@ -7997,6 +8086,9 @@
                 "source": "https://github.com/maximebf/php-debugbar/tree/v1.23.3"
             },
             "time": "2024-10-29T12:24:25+00:00"
+=======
+            "time": "2024-10-21T17:13:38+00:00"
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
         },
         {
             "name": "mockery/mockery",
@@ -8951,6 +9043,7 @@
         },
         {
             "name": "sebastian/comparator",
+<<<<<<< HEAD
             "version": "6.2.1",
             "source": {
                 "type": "git",
@@ -8961,6 +9054,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/43d129d6a0f81c78bee378b46688293eb7ea3739",
                 "reference": "43d129d6a0f81c78bee378b46688293eb7ea3739",
+=======
+            "version": "6.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/comparator.git",
+                "reference": "5ef523a49ae7a302b87b2102b72b1eda8918d686"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/5ef523a49ae7a302b87b2102b72b1eda8918d686",
+                "reference": "5ef523a49ae7a302b87b2102b72b1eda8918d686",
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
                 "shasum": ""
             },
             "require": {
@@ -8971,12 +9076,20 @@
                 "sebastian/exporter": "^6.0"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "phpunit/phpunit": "^11.4"
+=======
+                "phpunit/phpunit": "^11.3"
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-main": "6.2-dev"
+=======
+                    "dev-main": "6.1-dev"
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
                 }
             },
             "autoload": {
@@ -9016,7 +9129,11 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/comparator/issues",
                 "security": "https://github.com/sebastianbergmann/comparator/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/comparator/tree/6.2.1"
+=======
+                "source": "https://github.com/sebastianbergmann/comparator/tree/6.1.1"
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             },
             "funding": [
                 {
@@ -9024,7 +9141,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-10-31T05:30:08+00:00"
+=======
+            "time": "2024-10-18T15:00:48+00:00"
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
         },
         {
             "name": "sebastian/complexity",
@@ -9825,7 +9946,11 @@
         }
     ],
     "aliases": [],
+<<<<<<< HEAD
     "minimum-stability": "dev",
+=======
+    "minimum-stability": "stable",
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
     "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,

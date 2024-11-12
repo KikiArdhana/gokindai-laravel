@@ -1,6 +1,10 @@
 <?php
+<<<<<<< HEAD
 // Model: Member.php
 // Model: Member.php
+=======
+
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -10,6 +14,7 @@ class Member extends Model
 {
     use HasFactory;
 
+<<<<<<< HEAD
     protected $table = 'member';
     protected $primaryKey = 'id_pelanggan';
 
@@ -35,4 +40,14 @@ class Member extends Model
     {
         return $this->poin()->sum('jumlah_poin');
     }
+=======
+    protected $table = 'member'; // Nama tabel di database
+    protected $primaryKey = 'id_pelanggan'; // Menetapkan primary key
+   
+
+    protected $fillable = [
+        'nama_pelanggan',
+        'no_telepon',
+    ];
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
 }

@@ -18,6 +18,7 @@ export default {
     },
     plugins: [],
 };
+<<<<<<< HEAD
 
 
 // tailwind.config.js
@@ -29,3 +30,5 @@ module.exports = {
     }
   }
 }
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0

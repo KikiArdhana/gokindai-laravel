@@ -6,12 +6,18 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+<<<<<<< HEAD
         "filament/filament": "^3.2",
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9"
     },
     "require-dev": {
+<<<<<<< HEAD
         "barryvdh/laravel-debugbar": "^3.14",
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.1",
         "laravel/pint": "^1.13",
@@ -35,8 +41,12 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+<<<<<<< HEAD
             "@php artisan package:discover --ansi",
             "@php artisan filament:upgrade"
+=======
+            "@php artisan package:discover --ansi"
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -68,6 +78,10 @@
             "php-http/discovery": true
         }
     },
+<<<<<<< HEAD
     "minimum-stability": "dev",
+=======
+    "minimum-stability": "stable",
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
     "prefer-stable": true
 }
