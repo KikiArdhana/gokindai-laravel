@@ -18,3 +18,17 @@ export default {
     },
     plugins: [],
 };
+<<<<<<< HEAD
+
+
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    colors: {
+      // Configure your color palette here
+    }
+  }
+}
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0

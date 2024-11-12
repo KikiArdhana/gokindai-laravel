@@ -7,6 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<<<<<<< HEAD
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
 
     <link href="style.css" rel="stylesheet">
 </head>
@@ -56,7 +61,11 @@ section {
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
+<<<<<<< HEAD
+        <a class="navbar-brand ml-5" href="#">GoKindai</a>
+=======
         <a class="navbar-brand ml-5" href="#">Brand</a>
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -82,6 +91,33 @@ section {
     </div>
 </nav>
 <!-- Home -->
+<<<<<<< HEAD
+<section id="home" data-aos="fade-right" data-aos-offset="500">
+    <div class="ml-10 relative isolate px-6 pt-14 lg:px-8">
+        <div class="mx-auto max-w-6xl py-32 sm:py-48 lg:py-56 grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Text Content -->
+            <div class="text-left flex flex-col justify-center">
+                <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                    it’s not just <span class="highlight">FOOD</span>,
+                </h1>
+                <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl mt-2">
+                    it’s an <span class="highlight">EXPERIENCE</span>.
+                </h1>
+                <p class="mt-6 text-lg leading-8 text-white">reo aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+                <div class="mt-10 flex items-center gap-x-6">
+                    <a href="menu.php" class="rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-black shadow-lg hover:bg-gray-200 hover:text-black transform transition-transform duration-300 hover:scale-110">
+                        View Menu
+                    </a>
+                    <a href="rewards.php" class="rounded-full bg-rose-400 px-4 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-rose-200 hover:text-black transform transition-transform duration-300 hover:scale-110">
+                        Check Rewards
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Content -->
+            <div class="flex justify-center items-center lg:justify-end lg:ml-8">
+                <img src="https://cdn.vox-cdn.com/uploads/chorus_image/image/62582192/IMG_2025.280.jpg" alt="Food experience" class="w-full h-auto max-w-md rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 lg:max-w-lg">
+=======
 <section id="home">
     <div class="ml-10 relative isolate px-6 pt-14 lg:px-8">
         <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -103,32 +139,51 @@ section {
         Check Rewards
     </a>
 </div>
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             </div>
         </div>
     </div>
 </section>
 
+<<<<<<< HEAD
+
+<!-- Reward -->
+<section id="reward" class="flex flex-col justify-center items-center " >
+=======
 <!-- Reward -->
 <section id="reward" class="flex flex-col justify-center items-center ">
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
     <div class="mt-10 text-center">
         <h1 class="text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl">
             Poin Anda, Hadiah Anda
             <h2 class="font-semibold py-2 text-white mt-2 text-2xl ">Cek sekarang untuk Promo Spesial!</h2>
         </h1>
+<<<<<<< HEAD
+        <form class="flex justify-center items-center mt-8 relative" onsubmit="event.preventDefault(); checkReward();">
+=======
         <form class="flex justify-center items-center mt-8 relative">
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
     <div class="relative w-96">
         <input 
             type="search" 
             placeholder="Masukkan nomor telepon anda..." 
             class="px-8 py-3 w-full text-sm rounded-full border-none shadow-lg focus:outline-none focus:ring-2 focus:ring-black pr-10"
         >
+<<<<<<< HEAD
+        <span class="absolute right-7 top-1/2 transform -translate-y-1/2 cursor-pointer" onclick="checkReward()">
+=======
         <span class="absolute right-7 top-1/2 transform -translate-y-1/2 cursor-pointer">
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 2a9 9 0 100 18 9 9 0 000-18zM21 21l-4.35-4.35" />
             </svg>
         </span>
     </div>
 </form>
+<<<<<<< HEAD
+
+=======
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
   </div>
 </section>
 
@@ -228,7 +283,14 @@ section {
 </section>
 
 
+<<<<<<< HEAD
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+=======
 
+>>>>>>> e7119f55440785593f92f1bb45b223a2ff507ab0
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
