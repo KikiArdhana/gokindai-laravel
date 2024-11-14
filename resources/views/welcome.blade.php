@@ -7,6 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet">
+
 
     <link href="style.css" rel="stylesheet">
 </head>
@@ -82,7 +87,8 @@ section {
     </div>
 </nav>
 <!-- Home -->
-<section id="home">
+<section id="home"  data-aos="fade-up"
+data-aos-anchor-placement="center-bottom">
     <div class="ml-10 relative isolate px-6 pt-14 lg:px-8">
         <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div class="text-left"> <!-- Teks rata kiri -->
@@ -93,13 +99,13 @@ section {
     <h1 class="text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl mt-2">
         it’s an <span class="highlight">EXPERIENCE</span>.
     </h1>
+    <br>
     </div>
-                <p class="mt-6 text-lg leading-8 text-white">reo aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-                <div class="mt-10 flex items-center justify-start gap-x-6">
-    <a href="menu.php" class="rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-black shadow-lg hover:bg-gray-200 hover:text-black transform transition-transform duration-300 hover:scale-110">
+            
+    <a href="menu.php" class="rounded-full bg-white px-8 py-2.5 text-sm font-semibold text-black shadow-lg hover:bg-gray-200 hover:text-black transform transition-transform duration-300 hover:scale-110">
         View Menu
     </a>
-    <a href="rewards.php" class="rounded-full bg-rose-400  px-4 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-rose-200 hover:text-black transform transition-transform duration-300 hover:scale-110">
+    <a href="#reward" class="rounded-full bg-rose-200 ml-8 px-6 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-rose-200 hover:text-black transform transition-transform duration-300 hover:scale-110">
         Check Rewards
     </a>
 </div>
@@ -109,7 +115,8 @@ section {
 </section>
 
 <!-- Reward -->
-<section id="reward" class="flex flex-col justify-center items-center ">
+<section id="reward" class="flex flex-col justify-center items-center " data-aos="fade-up"
+data-aos-anchor-placement="center-bottom">
     <div class="mt-10 text-center">
         <h1 class="text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl">
             Poin Anda, Hadiah Anda
@@ -138,11 +145,11 @@ section {
         <!-- Kolom kiri untuk teks deskripsi -->
         <div class="w-1/2 ">
             <!-- Judul di tengah atas -->
-            <h1 class="text-sm font-bold tracking-tight text-white sm:text-3xl mb-8 text-center">
+            <h1 class ="about-title text-sm font-nautigal tracking-tight text-white sm:text-3xl mb-8 text-center">
                 About US & Place
             </h1>
 
-            <h3 class="text-l font-semibold mb-4 text-white">Selamat datang di Kindai, Resto spesialis masakan Banjar</h3>
+            <h3 class="text-l font-semibold mb-4 text-white">Selamat datang di Kindai, Resto spesialis masakan Banjar!</h3>
             <p class="mb-4 text-sm text-white">
                 Kindai hadir membawa cita rasa khas Banjarmasin ke tengah-tengah Yogyakarta. Kami bangga menyajikan hidangan autentik dari tanah Kalimantan Selatan, di mana setiap piring menghidangkan kenikmatan dan kehangatan tradisi Banjar.
             </p>
@@ -230,5 +237,9 @@ section {
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>

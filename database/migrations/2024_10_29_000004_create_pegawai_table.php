@@ -12,17 +12,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pegawai', function (Blueprint $table) {
-            $table->increments('id_aktor');
-            $table->string('nama');
+            $table->id('id_pegawai');
+            $table->string('nama_kasir');
             $table->string('role');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('pegawai');
     }

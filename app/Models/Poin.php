@@ -1,5 +1,6 @@
 <?php
 
+// Model: Poin.php
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,12 +10,8 @@ class Poin extends Model
 {
     use HasFactory;
 
-    protected $table = 'poin'; // Nama tabel di database
-    protected $primaryKey = 'id_poin'; // Menetapkan primary key
+    protected $table = 'poin';
+    protected $primaryKey = 'id_poin';
 
-
-    protected $fillable = [
-        'jumlah_poin',
-        'tanggal_diberikan',
-    ];
+    protected $fillable = ['id_transaksi', 'id_pelanggan', 'jumlah_poin', 'tanggal_diberikan'];
 }
