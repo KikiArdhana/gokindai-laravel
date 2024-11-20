@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <link href="style.css" rel="stylesheet">
 </head>
@@ -62,6 +63,7 @@ section {
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand ml-5" href="#">Brand</a>
+        <a class="navbar-brand ml-5" href="#">GoKindai</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -109,6 +111,31 @@ data-aos-anchor-placement="center-bottom">
         Check Rewards
     </a>
 </div>
+<section id="home" data-aos="fade-right" data-aos-offset="500">
+    <div class="ml-10 relative isolate px-6 pt-14 lg:px-8">
+        <div class="mx-auto max-w-6xl py-32 sm:py-48 lg:py-56 grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Text Content -->
+            <div class="text-left flex flex-col justify-center">
+                <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                    it’s not just <span class="highlight">FOOD</span>,
+                </h1>
+                <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl mt-2">
+                    it’s an <span class="highlight">EXPERIENCE</span>.
+                </h1>
+                <p class="mt-6 text-lg leading-8 text-white">reo aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+                <div class="mt-10 flex items-center gap-x-6">
+                    <a href="menu.php" class="rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-black shadow-lg hover:bg-gray-200 hover:text-black transform transition-transform duration-300 hover:scale-110">
+                        View Menu
+                    </a>
+                    <a href="rewards.php" class="rounded-full bg-rose-400 px-4 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-rose-200 hover:text-black transform transition-transform duration-300 hover:scale-110">
+                        Check Rewards
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image Content -->
+            <div class="flex justify-center items-center lg:justify-end lg:ml-8">
+                <img src="https://cdn.vox-cdn.com/uploads/chorus_image/image/62582192/IMG_2025.280.jpg" alt="Food experience" class="w-full h-auto max-w-md rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 lg:max-w-lg">
             </div>
         </div>
     </div>
@@ -117,12 +144,16 @@ data-aos-anchor-placement="center-bottom">
 <!-- Reward -->
 <section id="reward" class="flex flex-col justify-center items-center " data-aos="fade-up"
 data-aos-anchor-placement="center-bottom">
+
+<!-- Reward -->
+<section id="reward" class="flex flex-col justify-center items-center " >
     <div class="mt-10 text-center">
         <h1 class="text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl">
             Poin Anda, Hadiah Anda
             <h2 class="font-semibold py-2 text-white mt-2 text-2xl ">Cek sekarang untuk Promo Spesial!</h2>
         </h1>
         <form class="flex justify-center items-center mt-8 relative">
+        <form class="flex justify-center items-center mt-8 relative" onsubmit="event.preventDefault(); checkReward();">
     <div class="relative w-96">
         <input 
             type="search" 
@@ -130,6 +161,7 @@ data-aos-anchor-placement="center-bottom">
             class="px-8 py-3 w-full text-sm rounded-full border-none shadow-lg focus:outline-none focus:ring-2 focus:ring-black pr-10"
         >
         <span class="absolute right-7 top-1/2 transform -translate-y-1/2 cursor-pointer">
+        <span class="absolute right-7 top-1/2 transform -translate-y-1/2 cursor-pointer" onclick="checkReward()">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 2a9 9 0 100 18 9 9 0 000-18zM21 21l-4.35-4.35" />
             </svg>
@@ -195,6 +227,10 @@ data-aos-anchor-placement="center-bottom">
     <h1 class="text-balance text-sm font-semibold tracking-tight text-white sm:text-4xl mb-4">Khas Kindai</h1>
 </section>
 
+<section id="menu" class="flex  justify-center items-start ">
+    <h1 class="text-balance text-sm font-semibold tracking-tight text-white sm:text-4xl mb-4">Khas Kindai</h1>
+</section>
+
 <section id="contact" class="flex flex-col justify-center items-center mt-8 w-full">
     <h1 class="justiyfy-center text-balance text-sm font-bold tracking-tight text-white sm:text-4xl mb-4">Contact Us</h1>
     
@@ -241,5 +277,6 @@ data-aos-anchor-placement="center-bottom">
 <script>
   AOS.init();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
